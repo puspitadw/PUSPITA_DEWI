@@ -1,0 +1,281 @@
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif; /* Mengatur jenis font untuk seluruh halaman */
+    margin: 0; /* Menghapus margin default pada body */
+    padding: 0; /* Menghapus padding default pada body */
+}
+
+header {
+    display: flex; /* Mengatur header agar menggunakan flexbox */
+    justify-content: space-between; /* Menyebar konten header secara horizontal */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+    background-color: #004077; /* Warna latar belakang header */
+    padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+    color: white; /* Warna teks header */
+}
+
+.logo-container {
+    display: flex; /* Mengatur logo dan judul situs menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+}
+
+.logo {
+    height: 40px; /* Mengatur tinggi gambar logo */
+    margin-right: 10px; /* Jarak antara logo dan judul */
+}
+
+.site-title {
+    font-size: 24px; /* Ukuran font untuk judul situs */
+    margin: 0; /* Menghapus margin pada judul situs */
+}
+
+nav {
+    display: flex; /* Mengatur navigasi agar menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+}
+
+/* Menu utama */
+.menu {
+    list-style: none; /* Menghapus bullet point pada daftar menu */
+    margin: 0; /* Menghapus margin pada menu */
+    padding: 0; /* Menghapus padding pada menu */
+    display: flex; /* Mengatur menu sebagai flex container */
+}
+
+.menu > li {
+    position: relative; /* Mengatur posisi item menu secara relatif */
+    margin: 0 10px; /* Jarak antara item menu */
+}
+
+.menu > li:hover {
+    background-color: #055eac; /* Warna latar belakang saat item menu di-hover */
+    border-radius: 5px; /* Sudut melengkung pada item menu saat di-hover */
+}
+
+.menu a {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: white; /* Warna teks tautan menu */
+    padding: 10px 15px; /* Padding pada tautan menu */
+    display: block; /* Menampilkan tautan sebagai blok */
+}
+
+/* Dropdown menu */
+.menu .dropdown:hover .dropdown-menu {
+    display: block; /* Menampilkan menu dropdown saat item menu di-hover */
+}
+
+.dropdown-menu {
+    display: none; /* Menyembunyikan menu dropdown secara default */
+    z-index: 2; /* Mengatur z-index untuk menampilkan dropdown di atas konten lain */
+    position: absolute; /* Mengatur posisi dropdown secara absolut */
+    top: 100%; /* Menempatkan dropdown tepat di bawah item menu */
+    left: 0; /* Menempatkan dropdown di sisi kiri item menu */
+    background-color: #004077; /* Warna latar belakang menu dropdown */
+    padding: 0; /* Menghapus padding pada dropdown */
+    list-style: none; /* Menghapus bullet point pada daftar dropdown */
+    margin: 0; /* Menghapus margin pada dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Memberikan bayangan pada dropdown */
+}
+
+.dropdown:hover {
+    background-color: #055eac; /* Warna latar belakang saat item dropdown di-hover */
+    border-radius: 5px; /* Sudut melengkung pada item dropdown saat di-hover */
+}
+
+.dropdown-menu li {
+    margin: 0; /* Menghapus margin pada item dropdown */
+}
+
+.dropdown-menu a {
+    padding: 10px 15px; /* Padding pada tautan dropdown */
+    color: white; /* Warna teks tautan dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #055eac; /* Warna latar belakang saat tautan dropdown di-hover */
+}
+
+/* Ikon header */
+.header-icons {
+    display: flex; /* Mengatur ikon header menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+}
+
+.theme-switch,
+.search-box button {
+    background: none; /* Menghapus latar belakang tombol */
+    border: none; /* Menghapus border tombol */
+    color: white; /* Warna ikon dan teks tombol */
+    cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+.search-box {
+    display: flex; /* Mengatur kotak pencarian menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+    border: 1px solid white; /* Border kotak pencarian */
+    border-radius: 5px; /* Sudut melengkung pada kotak pencarian */
+    overflow: hidden; /* Menghindari konten meluap dari kotak pencarian */
+}
+
+.search-box input {
+    border: none; /* Menghapus border pada input pencarian */
+    padding: 5px 10px; /* Padding pada input pencarian */
+    background: none; /* Menghapus latar belakang pada input pencarian */
+    color: white; /* Warna teks pada input pencarian */
+}
+
+/* Gaya responsif */
+.hamburger-menu {
+    display: none; /* Menyembunyikan menu hamburger pada layar besar */
+    background: none; /* Menghapus latar belakang tombol */
+    border: none; /* Menghapus border tombol */
+    color: white; /* Warna ikon hamburger */
+    font-size: 24px; /* Ukuran font untuk ikon hamburger */
+    cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+/* Gaya untuk mode gelap */
+body.dark-mode {
+    background-color: #121212; /* Warna latar belakang untuk mode gelap */
+    color: #e0e0e0; /* Warna teks untuk mode gelap */
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e; /* Warna latar belakang header untuk mode gelap */
+    border-bottom: 1px solid #444; /* Border bawah pada header untuk mode gelap */
+}
+
+body.dark-mode .menu a,
+body.dark-mode .site-title,
+body.dark-mode .theme-switch,
+body.dark-mode .search-box button {
+    color: #ffffff; /* Warna putih untuk teks dan ikon dalam mode gelap */
+}
+
+body.dark-mode .menu > li:hover {
+    background-color: #555; /* Warna latar belakang saat item menu di-hover dalam mode gelap */
+    border-radius: 5px; /* Sudut melengkung pada item menu saat di-hover dalam mode gelap */
+}
+
+body.dark-mode .theme-switch .bx-sun {
+    color: yellow; /* Warna kuning untuk ikon matahari dalam mode gelap */
+}
+
+body.dark-mode .dropdown:hover {
+    background-color: #333; /* Warna latar belakang saat item dropdown di-hover dalam mode gelap */
+    border-radius: 5px; /* Sudut melengkung pada item dropdown saat di-hover dalam mode gelap */
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #333; /* Warna latar belakang menu dropdown dalam mode gelap */
+    border-color: #444; /* Warna border menu dropdown dalam mode gelap */
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background-color: #555; /* Warna latar belakang saat tautan dropdown di-hover dalam mode gelap */
+}
+
+body.dark-mode .search-box input,
+body.dark-mode .search-box button {
+    border-color: #444; /* Warna border untuk input dan tombol pencarian dalam mode gelap */
+}
+
+body.dark-mode .search-box button {
+    background-color: #333; /* Warna latar belakang tombol pencarian dalam mode gelap */
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+    header {
+        /* flex-direction: column; */
+        align-items: flex-start; /* Menyelaraskan item header ke sisi kiri pada layar kecil */
+    }
+
+    .site-title {
+        font-size: 15px; /* Ukuran font judul situs pada layar kecil */
+    }
+
+    .logo {
+        height: 30px; /* Mengatur tinggi gambar logo pada layar kecil */
+    }
+
+    .search-box {
+        width: 100%; /* Mengatur lebar kotak pencarian pada layar kecil */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Jarak antara logo dan konten navigasi pada layar kecil */
+    }
+
+    nav {
+        width: 100%; /* Mengatur lebar navigasi pada layar kecil */
+        position: relative; /* Menempatkan navigasi secara relatif */
+    }
+
+    .menu {
+        display: none; /* Menyembunyikan menu pada layar kecil */
+        flex-direction: column; /* Menyusun item menu secara vertikal */
+        width: 100%; /* Mengatur lebar menu pada layar kecil */
+        background-color: #004077; /* Warna latar belakang menu pada layar kecil */
+        position: absolute; /* Menempatkan menu secara absolut */
+        top: 60px; /* Menempatkan menu di bawah header */
+        left: 0; /* Menempatkan menu di sisi kiri layar */
+        z-index: 1000; /* Mengatur z-index untuk menampilkan menu di atas konten lain */
+    }
+
+    body.dark-mode .menu a {
+        background-color: #121212; /* Warna latar belakang tautan menu dalam mode gelap */
+    }
+
+    .menu.active {
+        display: flex; /* Menampilkan menu saat aktif pada layar kecil */
+    }
+
+    .menu > li {
+        margin: 0; /* Menghapus margin pada item menu */
+        border-bottom: 1px solid #055eac; /* Border bawah pada item menu */
+    }
+
+    body.dark-mode .menu > li {
+        border-bottom: 1px solid #303030; /* Border bawah pada item menu dalam mode gelap */
+    }
+
+    body.dark-mode .menu a:hover {
+        background-color: #555; /* Warna latar belakang saat tautan menu di-hover dalam mode gelap */
+        border-radius: 5px; /* Sudut melengkung pada tautan menu saat di-hover dalam mode gelap */
+    }
+
+    .menu > li:last-child {
+        border-bottom: none; /* Menghapus border bawah pada item menu terakhir */
+    }
+
+    .menu a {
+        padding: 15px; /* Padding pada tautan menu pada layar kecil */
+    }
+
+    .dropdown-menu {
+        position: static; /* Menempatkan menu dropdown di bawah item menu pada layar kecil */
+        box-shadow: none; /* Menghapus bayangan pada menu dropdown */
+        background-color: #004077; /* Warna latar belakang menu dropdown pada layar kecil */
+    }
+
+    .dropdown-menu li {
+        border-bottom: 1px solid #055eac; /* Border bawah pada item dropdown */
+    }
+
+    body.dark-mode .dropdown-menu li {
+        border-bottom: 1px solid #303030; /* Border bawah pada item dropdown dalam mode gelap */
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: none; /* Menghapus border bawah pada item dropdown terakhir */
+    }
+
+    .hamburger-menu {
+        display: block; /* Menampilkan tombol hamburger pada layar kecil */
+    }
+
+    .hamburger-menu.active + nav .menu {
+        display: flex; /* Menampilkan menu saat hamburger menu aktif */
+    }
+}

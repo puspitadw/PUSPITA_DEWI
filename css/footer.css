@@ -1,0 +1,128 @@
+/* Mengatur gaya dasar untuk elemen footer */
+.footer {
+    font-family: Arial, sans-serif; /* Menggunakan font Arial atau sans-serif */
+    background-color: #004077; /* Memberikan warna latar belakang biru */
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    padding: 20px 0; /* Menambahkan padding atas dan bawah sebesar 20px */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+/* Mengatur tata letak konten di dalam elemen dengan id footer-content */
+#footer-content {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-wrap: wrap; /* Membuat konten bisa turun ke baris berikutnya jika tidak muat */
+    justify-content: space-around; /* Menyebar elemen secara merata dengan ruang di antaranya */
+    gap: 40px; /* Memberikan jarak sebesar 40px antara elemen */
+    max-width: 1200px; /* Membatasi lebar maksimum konten */
+    margin: 0 auto; /* Mengatur margin otomatis untuk pusatkan konten */
+}
+
+/* Mengatur gaya untuk setiap elemen div di dalam #footer-content */
+#footer-content > div {
+    flex: 1 1 200px; /* Mengatur elemen agar fleksibel dengan lebar minimum 200px */
+    margin: 10px; /* Menambahkan margin sebesar 10px di sekitar setiap elemen */
+}
+
+/* Mengatur gaya paragraf di dalam elemen dengan kelas about-us */
+.about-us p {
+    text-indent: 2em; /* Menambahkan indentasi teks sebesar 2em */
+    text-align: justify; /* Menyelaraskan teks secara rata kiri-kanan */
+}
+
+/* Mengatur gaya untuk elemen heading h3 */
+h3 {
+    border-bottom: 1px solid #fff; /* Menambahkan garis bawah putih */
+    padding-bottom: 10px; /* Menambahkan padding bawah sebesar 10px */
+}
+
+/* Mengatur gaya untuk elemen link */
+a {
+    color: #000000; /* Mengatur warna teks link menjadi hitam */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: color 0.3s ease; /* Menambahkan transisi perubahan warna selama 0.3 detik */
+}
+
+/* Mengatur gaya untuk elemen dengan kelas social-icons */
+.social-icons {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Menyelaraskan konten di tengah */
+    gap: 10px; /* Menambahkan jarak sebesar 10px antara elemen */
+    padding: 10px 0; /* Menambahkan padding atas dan bawah sebesar 10px */
+}
+
+/* Mengatur gaya untuk setiap ikon sosial media */
+.social-icon {
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    font-size: 24px; /* Mengatur ukuran font sebesar 24px */
+    transition: color 0.3s ease; /* Menambahkan transisi perubahan warna selama 0.3 detik */
+}
+
+/* Mengatur gaya hover untuk ikon sosial media GitHub */
+.social-icon.github:hover {
+    color: #000000; /* Mengubah warna menjadi hitam saat dihover */
+    animation: expand 0.5s ease-in-out; /* Menambahkan animasi ekspansi selama 0.5 detik */
+}
+
+/* Mengatur gaya hover untuk ikon sosial media Twitter */
+.social-icon.twitter:hover {
+    color: #1da1f2; /* Mengubah warna menjadi biru Twitter saat dihover */
+    animation: expand 0.5s ease-in-out; /* Menambahkan animasi ekspansi selama 0.5 detik */
+}
+
+/* Mengatur gaya hover untuk ikon sosial media Instagram */
+.social-icon.instagram:hover {
+    color: #e1306c; /* Mengubah warna menjadi pink Instagram saat dihover */
+    animation: expand 0.5s ease-in-out; /* Menambahkan animasi ekspansi selama 0.5 detik */
+}
+
+/* Mengatur gaya hover untuk ikon sosial media LinkedIn */
+.social-icon.linkedin:hover {
+    color: #0077b5; /* Mengubah warna menjadi biru LinkedIn saat dihover */
+    animation: expand 0.5s ease-in-out; /* Menambahkan animasi ekspansi selama 0.5 detik */
+}
+
+/* Mendefinisikan animasi ekspansi */
+@keyframes expand {
+    0%, 100% {
+        transform: scaleX(1); /* Skala awal dan akhir tetap sama */
+    }
+    50% {
+        transform: scaleX(1.5); /* Skala membesar pada tengah animasi */
+    }
+}
+
+/* Gaya footer untuk mode gelap */
+body.dark-mode .footer {
+    background-color: #1e1e1e; /* Mengatur warna latar belakang menjadi abu-abu gelap */
+    color: #e0e0e0; /* Mengatur warna teks menjadi abu-abu terang */
+}
+
+/* Gaya link untuk mode gelap */
+body.dark-mode a {
+    color: #ff4081; /* Mengatur warna teks link menjadi pink */
+}
+
+/* Gaya ikon sosial media untuk mode gelap */
+body.dark-mode .social-icon {
+    color: #e0e0e0; /* Mengatur warna teks menjadi abu-abu terang */
+}
+
+/* Gaya hover ikon GitHub untuk mode gelap */
+body.dark-mode .social-icon.github:hover {
+    color: #000000; /* Mengubah warna menjadi hitam saat dihover */
+}
+
+/* Gaya hover ikon Twitter untuk mode gelap */
+body.dark-mode .social-icon.twitter:hover {
+    color: #1da1f2; /* Mengubah warna menjadi biru Twitter saat dihover */
+}
+
+/* Gaya hover ikon Instagram untuk mode gelap */
+body.dark-mode .social-icon.instagram:hover {
+    color: #e1306c; /* Mengubah warna menjadi pink Instagram saat dihover */
+}
+
+/* Gaya hover ikon LinkedIn untuk mode gelap */
+body.dark-mode .social-icon.linkedin:hover {
+    color: #0077b5; /* Mengubah warna menjadi biru LinkedIn saat dihover */
+}

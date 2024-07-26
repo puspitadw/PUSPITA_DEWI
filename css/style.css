@@ -1,0 +1,301 @@
+/* Mengatur margin dan padding semua elemen menjadi 0, serta mengatur box-sizing menjadi border-box dan font default menjadi 'Poppins' */
+body {
+    margin: 0; /* Mengatur margin menjadi 0 */
+    padding: 0; /* Mengatur padding menjadi 0 */
+    box-sizing: border-box; /* Mengatur box-sizing menjadi border-box */
+    text-decoration: none; /* Menghapus dekorasi teks */
+    font-family: 'Poppins', sans-serif; /* Mengatur font default menjadi 'Poppins' */
+}
+
+/* Mengatur kontainer utama dengan flexbox untuk kolom vertikal dan tinggi 100% */
+.main-container {
+    display: flex; /* Mengatur display menjadi flex */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+    height: 100%; /* Mengatur tinggi menjadi 100% */
+}
+
+/* Mengatur slider dengan posisi relatif, lebar penuh, overflow tersembunyi, dan tinggi 350px */
+.slider {
+    position: relative; /* Mengatur posisi menjadi relatif */
+    width: 100%; /* Mengatur lebar menjadi 100% */
+    margin: 0px; /* Mengatur margin menjadi 0px */
+    overflow: hidden; /* Mengatur overflow menjadi hidden */
+    height: 350px; /* Mengatur tinggi menjadi 350px */
+}
+
+/* Mengatur judul slide dengan posisi absolut di bawah, latar belakang semi-transparan, warna putih, padding, dan z-index 1 */
+.title {
+    position: absolute; /* Mengatur posisi menjadi absolut */
+    bottom: 0; /* Mengatur posisi bawah menjadi 0 */
+    left: 0; /* Mengatur posisi kiri menjadi 0 */
+    right: 0; /* Mengatur posisi kanan menjadi 0 */
+    background: rgba(0, 0, 0, 0.6); /* Mengatur latar belakang menjadi hitam semi-transparan */
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    padding: 10px; /* Mengatur padding menjadi 10px */
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    z-index: 1; /* Mengatur z-index menjadi 1 */
+}
+
+/* Mengatur kontainer slide dengan flexbox dan transisi transformasi */
+.slides {
+    display: flex; /* Mengatur display menjadi flex */
+    transition: transform 1s ease-in-out; /* Mengatur transisi transformasi */
+}
+
+/* Mengatur masing-masing slide dengan posisi relatif, lebar minimal 100%, dan box-sizing border-box */
+.slide {
+    position: relative; /* Mengatur posisi menjadi relatif */
+    min-width: 100%; /* Mengatur lebar minimal menjadi 100% */
+    box-sizing: border-box; /* Mengatur box-sizing menjadi border-box */
+}
+
+/* Mengatur posisi slide pertama dengan transformasi translateX(0%) */
+.slide-position-0 {
+    transform: translateX(0%); /* Mengatur transformasi translateX menjadi 0% */
+}
+
+/* Mengatur posisi slide kedua dengan transformasi translateX(-100%) */
+.slide-position-1 {
+    transform: translateX(-100%); /* Mengatur transformasi translateX menjadi -100% */
+}
+
+/* Mengatur posisi slide ketiga dengan transformasi translateX(-200%) */
+.slide-position-2 {
+    transform: translateX(-200%); /* Mengatur transformasi translateX menjadi -200% */
+}
+
+/* Mengatur gambar dalam slide dengan lebar penuh, tinggi 70%, dan object-fit cover */
+.slide img {
+    width: 100%; /* Mengatur lebar menjadi 100% */
+    height: 70%; /* Mengatur tinggi menjadi 70% */
+    object-fit: cover; /* Mengatur object-fit menjadi cover */
+}
+
+/* Mengatur wrapper konten dengan flexbox, tinggi penuh, dan margin atas 0px */
+.content-wrapper {
+    display: flex; /* Mengatur display menjadi flex */
+    flex: 1; /* Mengatur flex menjadi 1 */
+    height: 100%; /* Mengatur tinggi menjadi 100% */
+    margin-top: 0px; /* Mengatur margin atas menjadi 0px */
+}
+
+/* Mengatur elemen main dengan flex 1, padding 20px, dan overflow-y auto */
+main {
+    flex: 1; /* Mengatur flex menjadi 1 */
+    padding: 20px; /* Mengatur padding menjadi 20px */
+    overflow-y: auto; /* Mengatur overflow-y menjadi auto */
+}
+
+/* Mengatur kontainer untuk posting dengan grid, kolom otomatis mengisi dengan lebar minimal 300px dan jarak 15px */
+#show-post {
+    display: grid; /* Mengatur display menjadi grid */
+
+    /* Kolom akan fleksibel dalam ukuran, tetapi tidak akan lebih kecil dari 300px dan akan memperluas hingga mengisi ruang yang tersedia secara merata. */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Mengatur template kolom grid */
+    
+    gap: 15px; /* Mengatur jarak antar kolom menjadi 15px */
+}
+
+/* Mengatur kartu berita dengan latar belakang putih, border, border-radius, dan overflow tersembunyi */
+.news-card {
+    background-color: #fff; /* Mengatur latar belakang menjadi putih */
+    border: 1px solid #ddd; /* Mengatur border menjadi 1px solid #ddd */
+    border-radius: 5px; /* Mengatur border-radius menjadi 5px */
+    box-sizing: border-box; /* Mengatur box-sizing menjadi border-box */
+    overflow: hidden; /* Mengatur overflow menjadi hidden */
+    text-decoration: none; /* Mengatur dekorasi teks menjadi none */
+    position: relative; /* Mengatur posisi menjadi relatif */
+}
+
+/* Mengatur kontainer gambar dengan posisi relatif dan overflow tersembunyi */
+.image-container {
+    position: relative; /* Mengatur posisi menjadi relatif */
+    overflow: hidden; /* Mengatur overflow menjadi hidden */
+    padding: 0; /* Mengatur padding menjadi 0 */
+}
+
+/* Mengatur gambar dalam kontainer gambar dengan lebar penuh, tinggi otomatis, dan transisi transformasi */
+.image-container img {
+    width: 100%; /* Mengatur lebar menjadi 100% */
+    height: auto; /* Mengatur tinggi menjadi otomatis */
+    transition: transform 0.3s ease; /* Mengatur transisi transformasi */
+}
+
+/* Mengatur efek hover pada gambar untuk memperbesar skala */
+.image-container img:hover {
+    transform: scale(1.1); /* Mengatur transformasi skala menjadi 1.1 */
+}
+
+/* Mengatur figcaption dalam kartu berita dengan padding 15px */
+.news-card figcaption {
+    padding: 15px; /* Mengatur padding menjadi 15px */
+}
+
+/* Mengatur judul dalam kontainer gambar dengan posisi absolut di bawah, latar belakang semi-transparan, warna putih, padding, margin 0, font-size 18px, dan z-index 1 */
+.image-container h2 {
+    position: absolute; /* Mengatur posisi menjadi absolut */
+    bottom: 0; /* Mengatur posisi bawah menjadi 0 */
+    left: 0; /* Mengatur posisi kiri menjadi 0 */
+    right: 0; /* Mengatur posisi kanan menjadi 0 */
+    background: rgba(0, 0, 0, 0.6); /* Mengatur latar belakang menjadi hitam semi-transparan */
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    padding: 10px; /* Mengatur padding menjadi 10px */
+    margin: 0px; /* Mengatur margin menjadi 0px */
+    font-size: 18px; /* Mengatur ukuran font menjadi 18px */
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    z-index: 1; /* Mengatur z-index menjadi 1 */
+}
+
+/* Mengatur efek hover pada judul untuk mengubah warna */
+.image-container h2:hover {
+    color: rgb(0, 126, 253); /* Mengatur warna teks menjadi biru saat hover */
+}
+
+/* Mengatur tanggal dalam kartu berita dengan margin bawah 15px dan font-size 12px */
+.news-card .date {
+    margin-bottom: 15px; /* Mengatur margin bawah menjadi 15px */
+    font-size: 12px; /* Mengatur ukuran font menjadi 12px */
+}
+
+/* Mengatur paragraf dalam kartu berita dengan warna teks abu-abu dan font-size 14px */
+.news-card p {
+    color: #666; /* Mengatur warna teks menjadi abu-abu */
+    font-size: 14px; /* Mengatur ukuran font menjadi 14px */
+    margin: 0; /* Mengatur margin menjadi 0 */
+}
+
+/* Mengatur elemen pagination dengan flexbox, jarak antar elemen 15px, dan padding 10px */
+#pagination {
+    display: flex; /* Mengatur display menjadi flex */
+    justify-content: center; /* Mengatur konten menjadi rata tengah */
+    gap: 15px; /* Mengatur jarak antar elemen menjadi 15px */
+    padding: 10px; /* Mengatur padding menjadi 10px */
+}
+
+/* Mengatur tautan pagination dengan tampilan block, ukuran, teks center, border, border-radius, warna teks hitam, dan latar belakang semi-transparan */
+#pagination a {
+    display: block; /* Mengatur display menjadi block */
+    width: 30px; /* Mengatur lebar menjadi 30px */
+    height: 30px; /* Mengatur tinggi menjadi 30px */
+    line-height: 30px; /* Mengatur tinggi baris menjadi 30px */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Mengatur border menjadi 1px solid dengan warna semi-transparan */
+    border-radius: 5px; /* Mengatur border-radius menjadi 5px */
+    text-decoration: none; /* Mengatur dekorasi teks menjadi none */
+    color: #000; /* Mengatur warna teks menjadi hitam */
+    background-color: rgba(255, 255, 255, 0.7); /* Mengatur latar belakang menjadi putih semi-transparan */
+}
+
+/* Mengatur tautan pagination aktif dengan latar belakang biru semi-transparan, warna teks putih, dan border biru */
+#pagination a.active {
+    background-color: rgba(0, 123, 255, 0.8); /* Mengatur latar belakang menjadi biru semi-transparan */
+    color: white; /* Mengatur warna teks menjadi putih */
+    border: 1px solid rgba(0, 123, 255, 0.8); /* Mengatur border menjadi biru semi-transparan */
+}
+
+/* Mengatur efek hover pada tautan pagination untuk mengubah latar belakang */
+#pagination a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Mengatur latar belakang menjadi hitam semi-transparan */
+}
+
+/* Mengatur gaya untuk mode gelap */
+body.dark-mode {
+    background-color: #121212; /* Mengatur latar belakang menjadi hitam */
+    color: #e0e0e0; /* Mengatur warna teks menjadi abu-abu terang */
+}
+
+/* Mengatur gaya kartu berita dalam mode gelap */
+body.dark-mode .news-card {
+    background-color: #1e1e1e; /* Mengatur latar belakang menjadi abu-abu gelap */
+    border-color: #444; /* Mengatur warna border menjadi abu-abu */
+}
+
+/* Mengatur warna teks judul kartu berita dalam mode gelap */
+body.dark-mode .news-card h2 {
+    color: #fff; /* Mengatur warna teks menjadi putih */
+}
+
+/* Mengatur efek hover pada judul kartu berita dalam mode gelap */
+body.dark-mode .news-card h2:hover {
+    color: #e1306c; /* Mengatur warna teks menjadi merah muda */
+}
+
+/* Mengatur warna teks paragraf dalam kartu berita dalam mode gelap */
+body.dark-mode .news-card p {
+    color: #aaa; /* Mengatur warna teks menjadi abu-abu terang */
+}
+
+/* Mengatur gaya aside dalam mode gelap */
+body.dark-mode aside {
+    background-color: #2c2c2c; /* Mengatur latar belakang menjadi abu-abu gelap */
+    border-right-color: #444; /* Mengatur warna border kanan menjadi abu-abu */
+}
+
+/* Mengatur warna tautan tag dalam aside dalam mode gelap */
+body.dark-mode aside .tags a {
+    background-color: #444; /* Mengatur latar belakang menjadi abu-abu */
+    color: #e0e0e0; /* Mengatur warna teks menjadi abu-abu terang */
+}
+
+/* Mengatur efek hover pada tautan tag dalam aside dalam mode gelap */
+body.dark-mode aside .tags a:hover {
+    background-color: #555; /* Mengatur latar belakang menjadi abu-abu terang */
+}
+
+/* Mengatur gaya tautan pagination dalam mode gelap */
+body.dark-mode #pagination a {
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    border-color: rgba(255, 255, 255, 0.2); /* Mengatur warna border menjadi putih semi-transparan */
+    background-color: rgba(0, 0, 0, 0.7); /* Mengatur latar belakang menjadi hitam semi-transparan */
+}
+
+/* Mengatur gaya tautan pagination aktif dalam mode gelap */
+body.dark-mode #pagination a.active {
+    background-color: rgba(0, 123, 255, 0.8); /* Mengatur latar belakang menjadi biru semi-transparan */
+    color: #fff; /* Mengatur warna teks menjadi putih */
+    border-color: rgba(0, 123, 255, 0.8); /* Mengatur warna border menjadi biru semi-transparan */
+}
+
+/* Mengatur efek hover pada tautan pagination dalam mode gelap */
+body.dark-mode #pagination a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Mengatur latar belakang menjadi putih semi-transparan */
+}
+
+/* Gaya responsif untuk layar dengan lebar maksimum 1024px */
+@media (max-width: 1024px) {
+    /* Mengatur tinggi slider menjadi 300px */
+    .slider {
+        height: 300px; /* Mengatur tinggi slider menjadi 300px */
+    }
+
+    /* Mengatur ukuran font dan padding judul menjadi lebih kecil */
+    .title {
+        font-size: 16px; /* Mengatur ukuran font menjadi 16px */
+        padding: 8px; /* Mengatur padding menjadi 8px */
+    }
+
+    /* Mengatur tinggi gambar dalam slide menjadi otomatis */
+    .slide img {
+        height: auto; /* Mengatur tinggi gambar menjadi otomatis */
+    }
+}
+
+/* Gaya responsif untuk layar dengan lebar maksimum 640px */
+@media (max-width: 640px) {
+    /* Mengatur tinggi slider menjadi 250px */
+    .slider {
+        height: 250px; /* Mengatur tinggi slider menjadi 250px */
+    }
+
+    /* Mengatur ukuran font dan padding judul menjadi lebih kecil dan posisi bawahnya diangkat */
+    .title {
+        font-size: 10px; /* Mengatur ukuran font menjadi 10px */
+        padding: 6px; /* Mengatur padding menjadi 6px */
+        bottom: 30px; /* Mengatur posisi bawah menjadi 30px */
+    }
+
+    /* Mengatur tinggi gambar dalam slide menjadi otomatis */
+    .slide img {
+        height: auto; /* Mengatur tinggi gambar menjadi otomatis */
+    }
+}

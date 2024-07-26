@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Update</title> <!-- Judul halaman yang akan ditampilkan pada tab browser -->
+    <link rel="stylesheet" href="../css/header.css"> <!-- Menghubungkan file header.css khusus untuk gaya header -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Menghubungkan file style.css untuk gaya umum situs web -->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Menghubungkan file footer.css khusus untuk gaya footer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"> <!-- Menghubungkan file CSS untuk ikon dari Boxicons -->
+</head>
+
+<body>
+    <header>
+        <div class="logo-container"> <!-- pembungkus untuk logo dan judul situs -->
+            <img src="../gambar/logo.png" alt="Logo" class="logo"> <!-- Gambar logo -->
+            <h1 class="site-title">Express Update</h1> <!-- Judul situs -->
+        </div>
+        <nav>
+            <ul class="menu"> <!-- Daftar menu navigasi -->
+                <li><a href="../hmtl/index.html">Home</a></li> <!-- Link ke halaman utama yang menampilkan berita terbaru-->
+                <li><a href="#about">About</a></li> <!-- Link kmenuju footer -->
+                <li class="dropdown"> <!-- Menu dropdown untuk kategori -->
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-menu"> <!-- Daftar dropdown untuk kategori -->
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Nasional</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Internasional</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Ekonomi</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Olahraga</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Teknologi</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Hiburan</a>
+                        </li>
+                        <li><a href="#"
+                                onclick="alert('Untuk membuka kategori ini silahkan cari di form pencarian')">Gaya
+                                Hidup</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"> <!-- Menu dropdown untuk tag populer -->
+                    <a href="#">Popular Tags</a>
+                    <ul class="dropdown-menu"> <!-- Daftar dropdown untuk tag populer -->
+                        <li><a href="../hmtl/nasional.html">Nasional</a></li>
+                        <li><a href="../hmtl/internasional.html">Internasional</a></li>
+                        <li><a href="../hmtl/teknologi.html">Teknologi</a></li>
+                        <li><a href="../hmtl/gayaHidup.html">Gaya Hidup</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header-icons"> <!-- pembungkus icon yang ada di header -->
+                <button class="theme-switch"><i class='bx bx-moon'></i></button> <!-- Tombol untuk mengganti tema -->
+                <form class="search-box" onsubmit="searchByCategory(event)"> <!-- Form untuk pencarian berdasarkan kategori -->
+                    <input type="text" name="query" id="keyword" placeholder="Search by categories" required> <!-- Input teks untuk pencarian -->
+                    <button type="submit"><i class='bx bx-search'></i></button> <!-- Tombol submit pencarian -->
+                </form>
+            </div>
+        </nav>
+        <button class="hamburger-menu" aria-label="Toggle Menu"> <!-- Tombol menu hamburger untuk tampilan responsif -->
+            <i class='bx bx-menu'></i>
+        </button>
+    </header>
+    <div class="main-container"> <!-- pembungkus konten utama -->
+        <div class="slider"> <!-- pembungkus konten slide gambar dan teks nya -->
+            <div class="slides"> <!-- pembungkus slide gambar -->
+                <div class="slide"> <!-- pembungkus gambar 1 -->
+                    <img src="../gambar/pemerintah.jpg" alt="img1">
+                </div>
+                <div class="slide"> <!-- pembungkus gambar 2 -->
+                    <img src="../gambar/newjeans.jpg" alt="img2">
+                </div>
+                <div class="slide"> <!-- pembungkus gambar 3 -->
+                    <img src="../gambar/bola.jpg" alt="img3">
+                </div>
+            </div>
+            <div class="title"> <!-- pembungkus teks pada slider -->
+                <h1>Express Update</h1> <!-- Judul besar -->
+                <h2>"Breaking News, Right at Your Fingertips"</h2> <!-- Slogan situs -->
+            </div>
+        </div>
+        <div class="content-wrapper"> <!-- Pembungkus konten utama -->
+            <main>
+                <div id="show-post"></div> <!-- pembungkus untuk menampilkan postingan -->
+                <div id="pagination"></div> <!-- pembungkus untuk menampilkan navigasi halaman -->
+            </main>
+        </div>
+    </div>
+    <footer id="about">
+        <div class="footer"> <!-- Bagian footer -->
+            <div class="social-media"> <!-- Bagian media sosial -->
+                <h3>Follow Us</h3>
+                <div class="social-icons"> <!-- pembungkus Ikon media sosial -->
+                    <a href="https://github.com/puspitadw" target="_blank" class="social-icon github">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="#" onclick="alert('Link tidak ditemukan')" class="social-icon twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.instagram.com/pspita_dw" target="_blank" class="social-icon instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" onclick="alert('Link tidak ditemukan')" class="social-icon linkedin">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script> <!-- Menghubungkan  ke file script.js untuk kode js umum -->
+    <script src="../js/slide.js"></script> <!-- Menghubungkan ke file slide.js khusus untuk kode js slider -->
+    <script src="../js/home.js"></script> <!-- Menghubungkan ke file home.js khusus untuk kode tombol tema -->
+    <script src="../js/menu.js"></script> <!-- Menghubungkan ke file menu.js khusus untuk kode ikon menu pada responsive -->
+</body>
+
+</html>
